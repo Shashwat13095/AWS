@@ -2,5 +2,25 @@ PROJECT 1: CREATE A STATIC WEBSITE USING S3
 
 TOOLS USED:S3
 
-STEP 1 : SIGN INTO AMAZON CONSOLE
+STEP 1: SIGN INTO AMAZON CONSOLE
 STEP 2: CREATE A S3 BUCKET
+    1)GO TO S3 SERVICE in the AWS AMAZON CONSOLE
+    2)click on the orange create button
+    3)Choose a globally unique bucket name. 
+    4)Select the AWS region where you want to host the website
+    5)leave all the other options as it at default 
+    6)Hit the create button, your new bucket will be configured
+
+STEP 3:SET UP THE BUCKET FOR WEBSITE HOSTING
+    1)Select the newly created bucket in the S3 console
+    2)Go to properties tab
+    3)In the "Static website hosting" section, choose "Use this bucket to host a website."
+    4)In the "Index document" field, specify the name of your website's main HTML file (e.g., "index.html").
+    5)Click "Save changes."
+
+STEP 4:UPLOAD WEBSITE FILES
+    1)Go to Amazon S3<Buckets<"NEWLY CREATED BUCKET"
+    2)Hit the Orange "Upload" button
+    3)Hit the "Add files" button and add the newly created website files (for eg- index.html)
+
+STEP 4)SET PERMISSIONS
