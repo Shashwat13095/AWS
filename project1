@@ -23,4 +23,29 @@ STEP 4:UPLOAD WEBSITE FILES
     2)Hit the Orange "Upload" button
     3)Hit the "Add files" button and add the newly created website files (for eg- index.html)
 
-STEP 4)SET PERMISSIONS
+STEP 4)SET PERMISSIONS:-
+    To make your website publicly visible , you need to set permissions
+    1)Select the bucket and click the "Permissions" tab.
+    2)In the "Block public access" section, click "Edit."
+    3)Disable all public access settings and save the changes.
+    4)In the "Bucket policy" section, click "Edit."
+    5)Add a bucket policy that grants public read access to the bucket. Replace <your-bucket-name> with your actual bucket name.
+        {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::<your-bucket-name>/*"
+        }
+    ]
+}
+    Hit  "Save changes."
+
+STEP 5)ENABLE STATIC WEBSITE HOSTING:-
+    After setting permissions, go back to the "Properties" tab and make sure that the "Static website hosting" option is enabled. You should see an endpoint URL for your website.
+
+STEP 6)Test Your Website:
+    Open a web browser and enter the endpoint URL provided in the "Static website hosting" settings. You should now see your static website live on the internet.
